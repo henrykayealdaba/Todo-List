@@ -1,1 +1,3 @@
 .DS_Store
+
+mongoose.connect("mongodb+srv://aldabahenrykaye:test123@project.xbnho17.mongodb.net/todoListDB");

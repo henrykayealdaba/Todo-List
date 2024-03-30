@@ -13,14 +13,11 @@ app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
-mongoose.connect("mongodb://localhost:27017/todoListDB");
+mongoose.connect("mongodb+srv://aldabahenrykaye:test123@project.xbnho17.mongodb.net/todoListDB");
 
-const itemsSchema = {
-  name: {
-    type: String,
-    required: [true, "Why u didn't input something bruh?"],
-  },
-};
+const itemsSchema = new mongoose.Schema({
+  name: {type: String, default: 'Nothing'}
+});
 
 const Item = mongoose.model("Item", itemsSchema);
 
